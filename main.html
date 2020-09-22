@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mainCSSandJS/mainCSS.css">
+    <link rel="stylesheet" href="/headerCSSandJS/scss/scssHandF.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+    <title>מצב הקורונה בעולם</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css' rel='stylesheet' />   
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h4>מגפת הקורונה</h4>
+        </div>
+        <ul class="header-links">
+            <li>
+                <a href="#">דף הבית</a>
+            </li>
+            <li>
+                <a href="#">מידע לנגיף</a>
+            </li>
+            <li>
+                <a href="#">יצירת קשר</a>
+            </li>
+         
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+    <!-- <div id="casesData"></div> -->
+   
+    <div id='map'></div>
+    <pre id="coordinates" class="coordinates"></pre>
+    <div class="container">
+        <h2>מצב הקורונה במדינת <span id="country"></span><img src="" id="flag"></h2>
+        <div id="casesData">
+        </div>
+        <div class="board">
+            <div class="card a">
+                <i class="fa fa-tachometer"></i>
+                <h5>מצב החולים עכשיו</h5>
+                <span id="active"></span>
+            </div>
+            <div class="card ca">
+                <i class="fa fa-th-list"></i>
+                <h5>סך הכל מקרים מאומתים</h5>
+                <span id="cases"></span>
+            </div>
+            <div class="card cr">
+                <i class="fa fa-times-circle"></i>
+                <h5>חולים קשים + מונשמים</h5>
+                <span id="critical"></span>
+            </div>
+            <div class="card d">
+                <i class="fa fa-times"></i>
+                <h5>סך הכל מתים</h5>
+                <span id="death"></span>
+            </div>
+            <div class="card r">
+                <i class="fa fa-check-square"></i>
+                <h5>סך הכל מחלימים</h5>
+                <span id="recovered"></span>
+            </div>
+            <div class="card t">
+                <i class="fa fa-eye"></i>
+                <h5>סך כל הבדיקה בוצע
+                </h5>
+                <span id="tests"></span>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <script src="/mainCSSandJS/mainJS.js"></script>
+    <script src="/headerCSSandJS/script/headerJS.JS"></script>
+</body>
+
+</html>

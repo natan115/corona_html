@@ -1,0 +1,99 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    direction: rtl;
+    header {
+        display: flex;
+        background-color: #34495E;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 10vh;
+        font-family: 'David Libre', serif;
+        
+        .logo {
+            color: rgb(226 ,266 ,266);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 25px;
+        }
+        .header-links{
+            display: flex;
+            justify-content: space-around;
+            width: 35%;
+            z-index: 500;
+            a {
+                color: rgb(226 ,266 ,266);
+                text-decoration: none;
+                letter-spacing: 3px;
+                font-weight: bold;
+                font-size: 25px;
+            }
+            li {
+                list-style: none;
+            }
+        }
+        .burger{
+            display: none;
+            div {
+                width: 25px;
+                height: 3px;
+                background-color: rgb(226 ,266 ,266);
+                margin: 5px;
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    body {
+        header{
+            .header-links {
+                width: 60%;
+            }
+        }
+    }
+}
+@media screen and (max-width:786px) {
+    body {
+        overflow-x: hidden;
+        header{
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+            .header-links {
+                position: absolute;
+                right: 0px;
+                height: 92vh;
+                top: 8vh;
+                background-color: #34495E;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+                li {
+                    opacity: 0;
+                }
+            }
+            .header-active {
+                transform: translateX(0%);
+            }
+
+        }
+        @keyframes andLinks {
+            form { 
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+       
+    }
+}
